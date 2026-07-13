@@ -1,16 +1,11 @@
-# LLR-Revival v6.0 Nova
+# LLR-Revival v7.0 NovaPro
 
-**Compatible with Logos Bible Software® and Verbum®**
+Compatible with Logos Bible Software® and Verbum®
 
-> A fully browser-based library explorer for Logos/Verbum — developed by Pastor Hermann Fritz (FeG Horb am Neckar, Germany) as a revival and major extension of Steve Clark's original *Logos Library Reporter* (2015).
-
----
+A fully browser-based library explorer for Logos/Verbum — developed by Pastor Hermann Fritz (FeG Horb am Neckar, Germany) as a revival and major extension of Steve Clark's original Logos Library Reporter (2015).
 
 ## What is LLR-Revival?
-
 LLR-Revival reads your local Logos/Verbum database and presents all your books in a clear, feature-rich web interface — running directly in the browser, locally, without any additional app installation. No cloud dependency, no subscription.
-
----
 
 ## Key Features
 
@@ -23,18 +18,22 @@ LLR-Revival reads your local Logos/Verbum database and presents all your books i
 
 ### 🔍 Advanced Search
 - Full-text search across all books (title, author, category, series, year)
+- Full-text search across your own notes and sermon-prep projects (quotes, tasks, AI outlines, drafts) — instant, fully local, no AI needed
 - Category, author, epoch and language filters
 - Theological theme search with AI expansion
 - Fuzzy search for approximate matches
 - AI-powered book recommendations (Groq, OpenRouter, Anthropic, Ollama)
+- AI search assistance now also offered for a handful of imprecise library hits, not only when a search returns nothing at all
 
 ### ✝️ Sermon Workshop
-- **350+ pericopes** from OT, NT and Apocrypha (liturgical year filtered)
+- 350+ pericopes from OT, NT and Apocrypha (liturgical year filtered)
 - Cross-book liturgical feast search (Advent → all Advent texts from all books)
 - Word studies for Greek, Hebrew and Latin with direct Logos links
 - Clementina Vulgata and Neo-Vulgata links for Latin terms
 - Literature references with library search and fallback to best commentaries
 - AI exegetical sermon outline in 4 languages (DE/EN/FR/ES)
+- Faster, two-step AI sermon outline suggestions — quick preview of 5 approaches first, then a full outline only for the one you pick
+- AI-generated discussion questions for small groups / Bible studies, created from your existing sermon material
 - Parallel texts with "Open all" function
 - OT Introductions / NT Introductions / Archaeology quick access
 - Export as DOCX, notes per pericope
@@ -54,51 +53,39 @@ LLR-Revival reads your local Logos/Verbum database and presents all your books i
 - Work projects, Import/Export (PDF, DOCX, TXT, JSON)
 - Mobile optimized (Android/iOS)
 
----
-
 ## Languages
 
 | Language | Installer | Port |
-|----------|-----------|------|
-| 🇩🇪 German | `Win/DE/01-INSTALLIEREN-Doppelklick.py` | 8421 |
-| 🇬🇧 English | `Win/EN/01-INSTALL-DoubleClick.py` | 8422 |
-| 🇫🇷 French | `Win/FR/01-INSTALLER-DoubleClic.py` | 8423 |
-| 🇪🇸 Spanish | `Win/ES/01-INSTALAR-DobleClick.py` | 8424 |
+|---|---|---|
+| 🇩🇪 German | Win/DE/01-INSTALLIEREN-Doppelklick.py | 8421 |
+| 🇬🇧 English | Win/EN/01-INSTALL-DoubleClick.py | 8422 |
+| 🇫🇷 French | Win/FR/01-INSTALLER-DoubleClic.py | 8423 |
+| 🇪🇸 Spanish | Win/ES/01-INSTALAR-DobleClick.py | 8424 |
 
 All four language versions can run simultaneously on different ports.
 
----
-
 ## System Requirements
-
-- **Logos Bible Software** (v4–10) or **Verbum** — must have been started at least once
-- **Python 3.6+**
-- **Modern browser** (Brave, Chrome, Firefox, Edge, Safari)
-- **Windows** (primary), macOS and Linux supported
+- Logos Bible Software (v4–10) or Verbum — must have been started at least once
+- Python 3.6+
+- Modern browser (Brave, Chrome, Firefox, Edge, Safari)
+- Windows (primary), macOS and Linux supported
 - iOS/Android: works with a local web server app (e.g. KWS)
 
----
-
 ## Installation
-
-```
 1. Extract the ZIP file
 2. Open your language folder (e.g. Win/EN/)
 3. Double-click the installer (.py file)
 4. Installer reads Logos database, categorizes books, extracts covers
 5. Desktop shortcut created automatically
 6. Browser opens at http://localhost:8422 (EN)
-```
-
----
 
 ## Architecture
-
 ```
-LLR-Revival-6.0/
+LLR-Revival-7.0-NovaPro/
 ├── LLR-Revival-6.0-EN.html     # Main entry point
 ├── server.py                    # Local Python web server
-├── lazy-loader-v6.js            # On-demand module loader
+├── lazy-loader-v6.js             # On-demand module loader
+├── llr-fulltextsearch.js        # Full-text search over notes & projects
 ├── data.js                      # Your library data (installer-generated)
 ├── sermons-data.js              # 350+ pericopes
 ├── ui-sermon.js                 # Sermon Workshop
@@ -110,27 +97,17 @@ LLR-Revival-6.0/
 └── covers-mobile/               # WebP thumbnails for mobile
 ```
 
----
-
 ## Credits
-
-- **Steve Clark** — Original author of Logos Library Reporter (2015)
-- **Hermann Fritz** — Complete redevelopment and maintenance of LLR-Revival v3.0–v6.0
-- **Anthropic Claude AI** — AI software
-
----
+- Steve Clark — Original author of Logos Library Reporter (2015)
+- Hermann Fritz — Complete redevelopment and maintenance of LLR-Revival v3.0–v7.0
+- Anthropic Claude AI — AI software
 
 ## License
+Open source — free use for the global Logos community.
+Not for sale. This software is exclusively for free, non-commercial use.
 
-Open source — free use for the global Logos community.  
-**Not for sale.** This software is exclusively for free, non-commercial use.
+📦 GitHub Repository
+📚 Logos Bible Software
+🇩🇪 Auf Deutsch: README.de.md
 
----
-
-- 📦 [GitHub Repository](https://github.com/joefritz2024/Logos-Library-Reporter-Revival---v6.0-Nova---revised-and-reorganized-into-a-modular-structure)
-- 📚 [Logos Bible Software](https://www.logos.com)
-
-> 🇩🇪 **Auf Deutsch:** [README.de.md](README.de.md)
-
----
 *Logos Bible Software® is a registered trademark of Faithlife LLC. LLR-Revival is not an official Faithlife product.*
